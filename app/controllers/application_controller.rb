@@ -4,7 +4,9 @@ class ApplicationController < ActionController::Base
   # Add your actions below this line
   # ================================
 
-
+  def index
+    render({ :template => "index.html.erb"})
+  end
 
   def play_rock
     index = rand(3)
