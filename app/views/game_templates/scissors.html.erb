@@ -1,17 +1,11 @@
-<% index = rand(3) %>
-<% choices = ["rock", "paper", "scissors"]%>
-<% comp_choice = choices[index] %>
-
-<% if comp_choice == "rock" %>
-  <% outcome = "lost" %>
-<% elsif comp_choice = "paper" %>
-  <% outcome = "won" %>
-<% else %>
-  <% outcome = "lost" %>
-<% end %>
+<a href="/rock">Play Rock</a>
+<a href="/paper">Play Paper</a>
+<a href="/scissors">Play Scissors</a>
 
 <h2>We played scissors!</h2>
 
-<h2>They played <%= comp_choice %>!</h2>
+<h2>They played <%= @comp_choice %>!</h2>
 
-<h2>We <%= outcome%>!</h2>
+<h2>We <%= @outcome%>!</h2>
+
+<a href="/">Rules</a>
