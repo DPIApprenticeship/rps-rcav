@@ -1,0 +1,17 @@
+<% index = rand(3) %>
+<% moves = ["rock", "paper", "scissors"]%>
+<% comp_move = moves[index]%>
+
+<% if comp_move == "rock" %>
+  <% outcome = "won" %>
+<% elsif comp_move == "paper" %>
+  <% outcome = "tied" %>
+<% else %>
+  <% outcome = "lost" %>
+<% end%>
+
+<h2>We played paper!</h2>
+
+<h2>They played <%= comp_move %>!</h2>
+
+<h2>We <%= outcome %>!</h2>
