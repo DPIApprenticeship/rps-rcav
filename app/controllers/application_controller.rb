@@ -13,9 +13,10 @@ class ApplicationController < ActionController::Base
     choices = ["rock", "paper", "scissors"]
     @comp_choice = choices[index] 
 
+
     if @comp_choice == "rock"
       @outcome = "tied"
-    elsif @comp_choice = "paper"
+    elsif @comp_choice == "paper"
       @outcome = "lost"
     else
       @outcome = "won"
@@ -31,7 +32,7 @@ class ApplicationController < ActionController::Base
 
     if @comp_choice == "rock"
       @outcome = "won"
-    elsif @comp_choice = "paper"
+    elsif @comp_choice == "paper"
       @outcome = "tied"
     else
       @outcome = "lost"
@@ -42,14 +43,14 @@ class ApplicationController < ActionController::Base
   def play_scissors
     index = rand(3)
     choices = ["rock", "paper", "scissors"]
-    @comp_choice = choices[index] 
+    @comp_choice = choices[index]
 
     if @comp_choice == "rock"
       @outcome = "lost"
-    elsif @comp_choice = "paper"
+    elsif @comp_choice == "paper"
       @outcome = "won"
     else
-      @outcome = "lost"
+      @outcome = "tied"
     end
     render({ :template => "game_templates/scissors.html.erb"})
   end
